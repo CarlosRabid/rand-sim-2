@@ -31,4 +31,20 @@ const sendMessage = function () {
     })
 }
 
+let addFriend = function () {
+    debugger
+    const friendName = $("#inputFriend").val()
+    let username = (user.name)
+    $.post('/login', { username }, function (u) {
+        // User.findOne({ name: payload.to }, function (err, user) {
+        //     user.messages.push(message)
+        //     user.save()
+        //     res.end()
+        // })
+        console.log(u)
+        u.friends.push(friendName)
+        
+    })
+}
+
 render(LOGIN_TEMPLATE, { isLoggedIn: false }, LOGIN_AREA)

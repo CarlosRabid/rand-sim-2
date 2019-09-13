@@ -10,7 +10,7 @@ body{
     display: grid;
     grid-template-areas:
         "m l"
-        "m .";
+        "m f";
     grid-template-columns: 80% 20%;
     grid-template-rows: 5% 90% 5%;
     height: 100vh;
@@ -20,6 +20,13 @@ body{
     grid-area: l;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    align-content: center;
+}
+
+.friendzone {
+    grid-area: f;
+    display: grid;
+    grid-template-columns: 1fr;
     align-content: center;
 }
 

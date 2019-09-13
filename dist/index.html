@@ -20,6 +20,11 @@
         {{#if isLoggedIn}}
             <span>Hi {{username}}</span>
             <div class="button" onclick=logOut()>Logout</div>
+            <input type="text" id="inputFriend" placeholder="Add Friend">
+            <button class="button" onclick="addFriend()">Add buddy!</button>
+            {{#each data}}
+            <div class="friendzone">{{friends}}</div>
+            {{/each}}
         {{else}}
             <input id="username" placeholder="Username">
             <div class="button" onclick=logIn()>Login</div>
